@@ -1,0 +1,380 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+}
+body.disable-scroll{
+    overflow: hidden;
+}
+/*
+//////////////////////////////////////////
+HEADER
+//////////////////////////////////////////
+*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:   #F9F6F0;
+    padding: 2rem;
+    min-width: 50rem;
+    margin: 0 auto;
+}
+.title{
+    font-size: 3rem;
+    font-family: 'Oswald', sans-serif;
+}
+.header-menu{
+   display: none;
+}
+.buttons{
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+}
+.buttons a{
+    color: black;
+    border: 0;
+    transform: 1s;
+    padding: 1rem;
+    outline: none;
+}
+.buttons a:hover{
+    border-bottom: 0.1rem solid black;
+}
+.content {
+    min-width: 60rem;  /* Diminui um pouco a largura mínima */
+    margin: 0 auto;    /* Mantém o alinhamento central */
+}
+
+/*
+//////////////////////////////////////////
+MAIN
+//////////////////////////////////////////
+*/
+main{
+    background-color: #F9F6F0;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+.main-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* TEXT */
+.main-text{
+    width: 40%;
+    padding: 3rem;
+}
+.main-text-title{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.main-text-description{
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    font-weight: 500;
+}
+.main-text-button{
+    padding: 2rem 4rem;
+    border-radius: 0.5rem;
+    border: 0.3rem solid black;
+    cursor: pointer;
+    background-color: #e9e3e8;
+    font-size: 2rem;
+    outline: none;
+    transition: 0.5s;
+}
+.main-text-button:hover{
+    background-color: #888888;
+    transform: translateY(-1rem);
+}
+/* IMAGE */
+.main-image{
+    width: 50%;
+    text-align: center;
+    max-height: 70rem;
+}
+.main-image img{
+    width: 100%;
+    height: 70rem;
+    object-fit: cover;
+}
+.products{
+    padding: 3rem;
+    margin-top: 5rem;
+    background-color: #FFFFFF;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ajuste para 3 colunas fixas */
+    grid-gap: 2rem;
+    place-items: center;
+}
+
+.product{
+    background-color: #EEEEEE;
+    text-align: center;
+    padding: 3rem;
+    max-width: 40rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.product:hover{
+    transform: translateY(-2rem);
+    background-color: #dfd9d9;
+}
+.product-image{
+    width: 100%;
+    max-width: 30rem;
+}
+.product-info{
+    display: flex;
+    justify-content: space-between;
+}
+.product-info-name{
+    text-align: left;
+    font-weight: 500;
+}
+.product-info-name span{
+    display: block;
+    color: rgba(43, 42, 42, 0.7);
+    font-weight: 400;
+}
+.product-info-price{
+    color: black;
+    font-weight: 900;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #e2dfdf;
+    margin-top: 2rem;
+    align-items: center;
+    padding: 2rem;
+}
+.footer-menu{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+.footer1 a, .footer-menu li a, .footer-languages li a{
+    color: black;
+    padding: 0.5rem;
+}
+.footer1 a:hover, .footer-menu  li a:hover, .footer-languages li a:hover{
+    background-color: rgba(0, 0, 0, 0.09);
+}
+@media (max-width: 800px){
+    html{
+        font-size: 55%;
+    }
+    .content{
+        min-width: auto;
+    }
+}
+@media (max-width: 700px){
+    .buttons{
+        gap: 3rem;
+    }
+    .content{
+        min-width: auto;
+    }
+
+    .main-content{
+        flex-direction: column-reverse;
+    }
+    .main-image{
+        width: 100%;
+    }
+    .main-image img{
+        height: 50rem;
+        width: 90%;
+    }
+    .main-text {
+        width: 100%;
+        padding: 0 3rem;
+    }
+    footer{
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+@media (max-width: 500px){
+    header{min-width: auto;}
+    .buttons{display: none;}
+    
+    .main-image img {
+        height: 42rem;
+    }
+
+    .footer-menu{
+        gap: 0.1rem;
+    }
+    .header-menu{
+        display: block;
+        height: 3.9rem;
+        width: 3.9rem;
+        margin: 2rem;
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .header-menu ion-icon{
+        width: 100%;
+        height: 100%;
+    }
+    .header-menu ion-icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+    }
+    .header-menu-open{
+        opacity: 1;
+        transition: 0.5s;
+    }
+    .header-menu-close{
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .menu-section.on .header-menu-open{
+        display: initial;
+        opacity: 0;
+    }
+    .menu-section.on .header-menu-close{
+        display: initial;
+        opacity: 1;
+    }
+
+    .menu-section.on .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        overflow: hidden;
+    }
+}
+
+/* cadastro */
+.signup-container {
+    position: relative; /* Para permitir que o formulário seja posicionado sobre a imagem */
+    width: 100%;
+    height: 100vh; /* A altura da tela */
+}
+
+.signup {
+    padding: 20px;
+    background-color: rgba(244, 244, 244, 0.9); /* Fundo claro com um pouco de transparência */
+    margin-top: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Formulário fica posicionado sobre a imagem */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o formulário */
+    z-index: 10; /* Garante que o formulário fique sobre a imagem */
+}
+
+.signup-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+.signup-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.signup-form input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.signup-button {
+    padding: 12px 16px;
+    background-color: #ceac91;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #d793ee;
+}
+
+/* Imagem de fundo */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* A imagem vai ocupar toda a altura e largura da tela */
+    object-fit: cover; /* Faz com que a imagem cubra todo o container sem distorcer */
+    z-index: 1; /* A imagem fica atrás do formulário */
+}
+
+@media (max-width: 500px) {
+    .signup {
+        padding: 15px;
+    }
+
+    .signup-title {
+        font-size: 20px;
+    }
+
+    .signup-form input {
+        padding: 10px;
+    }
+
+    .signup-button {
+        padding: 10px 14px;
+    }
+}
+

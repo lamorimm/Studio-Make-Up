@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - MakeUp Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">MakeUp Studio</h1>
+        <div class="menu-section">
+            <div class="header-menu">
+                <ion-icon class="header-menu-open" name="menu"></ion-icon>
+                <ion-icon class="header-menu-close" name="close"></ion-icon>
+            </div>
+            <ul class="buttons">
+                <li class="button"><a href="cadastro.html">Cadastro</a></li>
+                <li class="button"><a href="produtos.html">Produtos</a></li>
+                <li class="button"><a href="carrinho.html">Carrinho</a></li>
+                <li class="button"><a href="sobrenos.html">Sobre Nós</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="content">
+        <section class="about">
+            <h3>Sobre o MakeUp Studio</h3>
+            <br>
+
+            <!-- Imagem inicial da seção "Sobre Nós" -->
+            <div class="about-image">
+                <img src="img/sobrenos.jpg" alt="MakeUp Studio" class="about-img">
+            </div>
+
+            <h>Bem-vindo à MakeUp Studio!</h>
+
+            <p>Na MakeUp Studio, nossa missão é proporcionar a você uma experiência única no mundo da beleza e maquiagem. <br>Somos uma loja virtual dedicada a oferecer os melhores produtos de maquiagem para todos os estilos e ocasiões,<br> com qualidade, praticidade e os melhores preços do mercado.
+                
+                Aqui, você encontrará uma seleção cuidadosa de produtos <br>de maquiagem, desde os básicos para o dia a dia até os itens indispensáveis para criar um look deslumbrante para eventos <br>especiais. Trabalhamos com as marcas mais renomadas do mercado e sempre buscamos novidades para garantir que você <br>tenha o que há de melhor para realçar sua beleza de forma simples e acessível.
+                
+                A nossa loja online foi pensada para ser intuitiva <br> e fácil de navegar, permitindo que você faça suas compras de maneira prática e segura. Além disso, temos um atendimento <br> personalizado para tirar todas as suas dúvidas e garantir a melhor experiência de compra.
+                
+                Seja para aprimorar seu visual no dia <br> a dia ou criar produções incríveis para ocasiões especiais, a MakeUp Studio tem tudo o que você precisa para se sentir ainda mais <br>confiante e poderosa.
+            </p>
+            <hr><br><br><br>
+            <h3>Contato:</h3>
+            <h2>
+                - WhatsApp: (99) 9999-9999
+            </h2>
+            <h2>
+                <!-- Link para o Instagram -->
+                - Instagram: <a href="https://www.instagram.com/llais.amorim" target="_blank" style="color: #ceac9150; text-decoration: none;">@llais.amorim</a>
+            </h2>
+        </section>
+    </div>
+
+    <script>
+        const header_menu_button = document.querySelector(".header-menu");
+        const menu_sections = document.querySelector(".menu-section");
+        header_menu_button.addEventListener("click", () => {
+            menu_sections.classList.toggle("on");
+            if(menu_sections.classList.contains("on")){
+                document.querySelector("body").classList.add("disable-scroll");
+            } else {
+                document.querySelector("body").classList.remove("disable-scroll");
+            }
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

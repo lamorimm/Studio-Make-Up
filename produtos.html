@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeUp Studio - Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">MakeUp Studio</h1>
+        <div class="menu-section">
+            <div class="header-menu">
+                <ion-icon class="header-menu-open" name="menu"></ion-icon>
+                <ion-icon class="header-menu-close" name="close"></ion-icon>
+            </div>
+            <ul class="buttons">
+                <li class="button"><a href="cadastro.html">Cadastro</a></li>
+                <li class="button"><a href="produtos.html">Produtos</a></li>
+                <li class="button"><a href="carrinho.html">Carrinho</a></li>
+                <li class="button"><a href="sobrenos.html">Sobre Nós</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="content">
+        <section class="products">
+            <div class="product">
+                <img class="product-image" src="img/gloss kiko.webp" alt="Gloss Kiko">
+                <div class="product-info">
+                    <p class="product-info-name">Gloss Kiko</p>
+                    <p class="product-info-price">R$89,99</p>
+                    <button class="product-info-button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img class="product-image" src="img/base kiko.webp" alt="Base Liquida Kiko">
+                <div class="product-info">
+                    <p class="product-info-name">Base Liquida Kiko</p>
+                    <p class="product-info-price">R$195,50</p>
+                    <button class="product-info-button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img class="product-image" src="img/rimel kiko.webp" alt="Máscara de Cílios Kiko">
+                <div class="product-info">
+                    <p class="product-info-name">Máscara de Cílios Kiko</p>
+                    <p class="product-info-price">R$77,92</p>
+                    <button class="product-info-button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img class="product-image" src="img/fixador.webp" alt="Spray Fixador Kiko">
+                <div class="product-info">
+                    <p class="product-info-name">Spray Fixador Kiko</p>
+                    <p class="product-info-price">R$65,93</p>
+                    <button class="product-info-button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+
+            <!-- Novos produtos adicionados -->
+            <div class="product">
+                <img class="product-image" src="img/batom.webp"Batom MAC">
+                <div class="product-info">
+                    <p class="product-info-name">Batom MAC</p>
+                    <p class="product-info-price">R$139,90</p>
+                    <button class="product-info-button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img class="product-image" src="img/base kiko.webp" alt="Blush Benefit">
+                <div class="product-info">
+                    <p class="product-info-name">Blush Benefit</p>
+                    <p class="product-info-price">R$139,00</p>
+                    <button class="product-info-button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img class="product-image" src="img/paleta.jpg" alt="Paleta Naked Urban Decay">
+                <div class="product-info">
+                    <p class="product-info-name">Paleta Naked Urban Decay</p>
+                    <p class="product-info-price">R$399,90</p>
+                    <button class="product-info-button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img class="product-image" src="img/pinceis.png" alt="Pincel Real Techniques">
+                <div class="product-info">
+                    <p class="product-info-name">Pinceis Real Techniques</p>
+                    <p class="product-info-price">350,90</p>
+                    <button class="product-info-button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+
+            <div class="product">
+                <img class="product-image" src="img/delineador.webp" alt="Delineador Azul">
+                <div class="product-info">
+                    <p class="product-info-name">Delineador Kiko azul</p>
+                    <p class="product-info-price">R$159,90</p>
+                    <button class="product-info-button">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </section>
+
+    <script>
+        // header menu script
+        const header_menu_button = document.querySelector(".header-menu");
+        const menu_sections = document.querySelector(".menu-section");
+        header_menu_button.addEventListener("click", () => {
+            menu_sections.classList.toggle("on");
+            if(menu_sections.classList.contains("on")){
+                document.querySelector("body").classList.add("disable-scroll");
+            } else {
+                document.querySelector("body").classList.remove("disable-scroll");
+            }
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+

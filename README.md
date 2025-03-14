@@ -1,1 +1,1 @@
-# Studio-Make-Up
+# MakeUp-Studio

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeUp Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">MakeUp Studio</h1>
+        <div class="menu-section">
+            <div class="header-menu">
+                <ion-icon class="header-menu-open" name="menu"></ion-icon>
+                <ion-icon class="header-menu-close" name="close"></ion-icon>
+            </div>
+            <ul class="buttons">
+                <li class="button"><a href="cadastro.html">Cadastro</a></li>
+                <li class="button"><a href="produtos.html">Produtos</a></li>
+                <li class="button"><a href="carrinho.html">Carrinho</a></li>
+                <li class="button"><a href="sobrenos.html">Sobre Nós</a></li>
+            </ul>
+    </header>
+
+    <div class="signup-container">
+        <div class="signup">
+            <h2 class="signup-title">Cadastro</h2>
+            <form class="signup-form">
+                <label for="username">Nome de Usuário</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit" class="signup-button">Cadastrar</button>
+            </form>
+        </div>
+        <img src="img/imagem-fundo.jpg" alt="Imagem de fundo" class="background-image">
+    </div>
+    
+
+    <script>
+        const header_menu_button = document.querySelector(".header-menu");
+        const menu_sections = document.querySelector(".menu-section");
+        header_menu_button.addEventListener("click", () => {
+            menu_sections.classList.toggle("on");
+            if(menu_sections.classList.contains("on")){
+                document.querySelector("body").classList.add("disable-scroll");
+            } else {
+                document.querySelector("body").classList.remove("disable-scroll");
+            }
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
