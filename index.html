@@ -42,7 +42,6 @@
         </div>
         <img src="img/imagem-fundo.jpg" alt="Imagem de fundo" class="background-image">
     </div>
-    
 
     <script>
         const header_menu_button = document.querySelector(".header-menu");
@@ -55,7 +54,21 @@
                 document.querySelector("body").classList.remove("disable-scroll");
             }
         });
+
+   
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js') // Certifique-se de que o caminho está correto
+                .then((registration) => {
+                    console.log('Service Worker registrado com sucesso:', registration);
+                })
+                .catch((error) => {
+                    console.log('Erro ao registrar o Service Worker:', error);
+                });
+            });
+        }
     </script>
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
