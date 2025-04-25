@@ -1,0 +1,44 @@
+{
+    "name": "Studio MakeUp",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "short_name": "Studio_MakeUp",
+    "description": "Um pwa onde mostra uma tela de produtos de maquiagem",
+    "icons": [
+      {
+        "src": "icons/icon-studio-40.png",
+        "sizes": "40x40",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/icon-studio-57.png",
+        "sizes": "57x57",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/icon-studio-80.png",
+        "sizes": "80x80",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/icon-studio-114.png",
+        "sizes": "114x114",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/icon-studio-180.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/icon-studio-1024.png",
+        "sizes": "1024x1024",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/icon-studio-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
